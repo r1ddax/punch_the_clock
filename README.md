@@ -5,10 +5,10 @@
 
 ### *Goals:*
 
-ˋˋˋ _D -> Doing._
-  _F -> Finished._
-  _0 -> Not yet started._
-ˋˋˋ
+`D -> Doing.
+  _ -> Finished.
+  0 -> Not yet started`
+
 * D - Instance object of a classe Employee.
 * D - Delete intances to free memory.
 * 0 - Create lists and add and rm objects.
