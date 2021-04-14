@@ -6,7 +6,7 @@
 ### *Goals:*
 
 ` __ [D] -> Doing.
-  __ [F]-> Finished.
+  __ [F] -> Finished.
   __ [0] -> Not yet started`
 
 * D - Instance object of a classe Employee.
