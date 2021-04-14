@@ -5,9 +5,9 @@
 
 ### *Goals:*
 
-`D -> Doing.
-  _ -> Finished.
-  0 -> Not yet started`
+` __ [D] -> Doing.
+  __ [F]-> Finished.
+  __ [0] -> Not yet started`
 
 * D - Instance object of a classe Employee.
 * D - Delete intances to free memory.
