@@ -79,3 +79,13 @@ void print(Employee *obj) {
     // Print name and code.
     printf("\n > Name: [%s] | > Code: [%s]\n", obj->name, obj->code);
 }
+
+
+/*
+
+Author: r1ddax
+Date: 04.14.21
+Time: 12:18 AM
+Relase: Document, Git, Github and Code organization.
+
+*/
