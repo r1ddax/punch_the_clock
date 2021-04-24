@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <ctype.h>
 #include <string.h>
+#include <stdbool.h>
+#include <ctype.h>
 
 // Class Employee:
 typedef struct Employee Employee;
@@ -14,6 +15,22 @@ struct Employee {
 	// Methods
 	void (*ptrParamDefine)(Employee *);
 };
+
+struct Node {
+	Employee *object;
+	struct Node *previous;
+};
+
+struct Node* createNode(Employee *object, struct Node *previous) {
+		struct Node *node = (struct Node*) malloc(sizeof(struct Node));
+	node->object = object;
+	if (previous) {
+		node->previous = previous;
+	}
+	return node;
+};
+
+
 
 // Prototypes Employee:
 void settingEmployee(Employee *obj);
@@ -31,10 +48,21 @@ int main() {
 	Employee *P2 = (Employee *)calloc(1, sizeof(Employee));
 	settingEmployee(P2);
 
+
+	struct Node *first 	= createNode(P1, NULL);
+	struct Node *second = createNode(P2, first);
+
+	// Testing the Linked List.
+	printf("\n data first name, %s ", first->object->name);
+	printf("\n data second name,  %s ", second->object->name);
+	second = second->previous;
+	printf("\n data second name of his previous,  %s ", second->object->name);
+
 	printf("\n --- Objects --- \n");
 	printf(" > [P1] Name Object: %s \t\t [P2] Name Object: %s \n", P1->name, P2->name);
 	printf(" > [P1] Code Object: %s \t\t [P2] Code Object: %s \n", P1->code, P2->code);
 
+	return 0;
 }
 
 // Functions
